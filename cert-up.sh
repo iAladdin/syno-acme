@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # path of this script
-BASE_ROOT=$(cd "$(dirname "$0")";pwd)
+BASE_ROOT="/shared/acmesh"
 # date time
 DATE_TIME=`date +%Y%m%d%H%M%S`
 # base crt path
@@ -27,7 +27,7 @@ installAcme () {
   mkdir -p ${TEMP_PATH}
   cd ${TEMP_PATH}
   echo 'begin downloading acme.sh tool...'
-  ACME_SH_ADDRESS=`curl -L https://raw.githubusercontent.com/andyzhshg/syno-acme/master/acme.sh.address`
+  ACME_SH_ADDRESS=`curl -L https://raw.githubusercontent.com/iAladdin/syno-acme/master/acme.sh.address`
   SRC_TAR_NAME=acme.sh.tar.gz
   curl -L -o ${SRC_TAR_NAME} ${ACME_SH_ADDRESS}
   SRC_NAME=`tar -tzf ${SRC_TAR_NAME} | head -1 | cut -f1 -d"/"`
