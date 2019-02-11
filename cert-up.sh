@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # path of this script
-BASE_ROOT="/shared/acmesh"
+BASE_ROOT=$(cd "$(dirname "$0")";pwd)
 # date time
 DATE_TIME=`date +%Y%m%d%H%M%S`
 # base crt path
